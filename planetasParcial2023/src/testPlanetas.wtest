@@ -1,0 +1,53 @@
+import example.*
+/*test "testX" {
+
+	//assert.that(true)
+	//assert.equals(valorQueMeTieneQueDar, loQuePruebo)
+
+}*/
+
+test "La delegacion diplomatica esta formada por tres de ellas ramax20"{
+	
+	const rama = new Persona(edad=70, monedas=50)
+	const franco= new Persona(edad=21, monedas=40)
+	const grego= new Persona(edad=65, monedas=35)
+	const esteban= new Persona(edad=66, monedas=10)
+	
+	const muralla1= new Construccion(tipoDeConstruccion=new Muralla(longitud=10))
+	const muralla2= new Construccion(tipoDeConstruccion=new Muralla(longitud=20))
+	const museo= new Construccion(tipoDeConstruccion= new Museo(superficieCubierta=100, indiceDeImportancia=2))
+	
+	const construcciones= [muralla1,muralla2,museo]
+	const habitantes= [rama,franco,grego,esteban ]
+	
+	const construcciones2=[muralla1]
+	
+	
+	const planeta = new Planeta(habitantes=habitantes,construcciones=construcciones)
+	const planeta2= new Planeta(habitantes=habitantes,construcciones=construcciones2)
+	
+	//assert.equals(3, planeta.delegacionDiplomatica().size()) TEST 1
+	
+	//assert.that(planeta.esValioso()) test2
+	
+	assert.notThat(planeta2.esValioso()) //test3
+	
+}
+
+test "Constructores viven en distintas regiones y al menos uno trabaja bien x7"{
+	
+	
+	
+	
+	
+	const rama = new Constructor(edad=70, monedas=50, region=montania)
+	const grego = new Constructor(edad=10, monedas=10, region=costa)
+	const franco = new Productor(edad=12, monedas=12, viveEn=planeta)
+	rama.trabajar(10,planeta)
+	const habitantes=[rama,grego,franco]
+	const planeta = new Planeta(habitantes=habitantes)
+
+	//assert.equals(1, rama.construccionesRealizadas().size()) test 2.1
+	assert.equals(1, planeta.delegacionDiplomatica().size()) // test 2.2
+	
+}
